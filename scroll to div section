@@ -1,0 +1,18 @@
+<ul class="tabScroll">
+                                        <li><a href="#business_tab">{{ section.settings.code1}}</a></li>
+                                        <li><a href="#investmentnew_tab">{{ section.settings.code2}}</a></li>
+                                        <li><a href="#property_tab">{{ section.settings.code3}}</a></li>
+                                        <li><a href="#training_tab">{{ section.settings.code4}}</a></li>
+                                        <li><a href="#others_tab">{{ section.settings.code5}} <span class="hidemobileTerm">&amp; Term Details</span></a></li>
+                                    </ul>
+$(document).ready(function () {
+$( '.tabScroll a' ).on( 'click', function(e){
+	 e.preventDefault();
+  var href = $(this).attr( 'href' );
+   $( 'html, body' ).animate({
+		scrollTop: $( href ).offset().top-160
+  }, '300' );
+	
+console.log(href);
+});
+});
